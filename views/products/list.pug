@@ -1,0 +1,30 @@
+extends ../layout
+
+block content
+    .row
+        .col-sm-8
+            h1=title
+        .col-sm-4
+            a(href="/products/add", class="btn btn-primary float-right") Add New Product
+    table.table
+        thead
+            tr
+                th Category
+                th Name
+                th Price
+                th Code
+                th Details
+
+        tbody
+            each product in products
+                tr  
+                    td=product.category
+                    td=product.name
+                    td=product.price
+                    td=product.code
+                    td=product.details
+                    td
+                        a(href="/products/delete/"+product._id, class="btn btn-danger") Delete
+                        a(href="/products/edit/"+product._id, class="btn btn-primary") Edit
+
+

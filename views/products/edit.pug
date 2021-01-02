@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+    h1 Designers Clothes
+    form(action="/products/edit/"+product._id,method="post")
+        .form-group
+            label(for="category") Category
+            input#category(type="text", class="form-control", name="category")
+        .form-group
+            label(for="name") Name
+            input#name(type="text", class="form-control", name="name")
+        .form-group
+            label(for="price") Price
+            input#price(type="text", class="form-control", name="price")
+        .form-group
+            label(for="code") Code
+            input#code(type="text", class="form-control", name="code")
+        .form-group
+            label(for="details") Details
+            input#details(type="text", class="form-control", name="details")
+        input(type="submit", class="btn btn-info")
+        
